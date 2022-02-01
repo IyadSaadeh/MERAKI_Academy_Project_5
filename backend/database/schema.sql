@@ -8,7 +8,7 @@ Create Table Patient(
     lastName varchar(255),
     phone varchar(255),
     password varchar(255),
-isDeleted TINYINT DEFAULT 0
+    isDeleted TINYINT DEFAULT 0
 );
 
 Create Table Clinc(
@@ -25,7 +25,7 @@ Create Table Clinc(
     departmentId int not null,
     doctorId int not null,
     cityId int not null,
-isDeleted TINYINT DEFAULT 0,
+    isDeleted TINYINT DEFAULT 0,
     FOREIGN Key(doctorId) REFERENCES Doctor(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN Key(cityId) REFERENCES City(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN Key(departmentId) REFERENCES MedicalDepartment(id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -33,6 +33,8 @@ isDeleted TINYINT DEFAULT 0,
 
 Create Table Doctor(
     id int not null auto_increment primary key,
+    firstName varchar(255),
+    lastName varchar(255),
     email varchar(255),
     password varchar(255),
     profileImage varchar(255),
@@ -40,17 +42,17 @@ Create Table Doctor(
     Nationality varchar(255),
     specialization varchar(255),
     ScientificCertificate varchar(255),
-isDeleted TINYINT DEFAULT 0
+    isDeleted TINYINT DEFAULT 0
 );
 
 Create Table MedicalDepartment(
     id int not null auto_increment primary key,
     Name varchar(255),
-isDeleted TINYINT DEFAULT 0
+    isDeleted TINYINT DEFAULT 0
 );
 
 Create Table City(
     id int not null auto_increment primary key,
     Name varchar(255),
-isDeleted TINYINT DEFAULT 0
+    isDeleted TINYINT DEFAULT 0
 );
