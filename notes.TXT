@@ -1,0 +1,10 @@
+
+in patient profile add scroll in table
+and center table . fix center scroll not 
+ 
+add sticky in nav .!!
+
+edit Appointment in Dashbored 
+تخبيص
+Delete Ratting 
+create Admin Dashbored and create table Feedback to Approve it 
